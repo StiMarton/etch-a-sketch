@@ -1,11 +1,7 @@
-
-
 .gridContainer {
     margin-top: 25px;
     margin-right: 40px;
     display: inline-grid;
-    grid-template-columns: repeat(16, 2fr);
-    grid-template-rows: repeat(16, 2fr);
     border: 5px solid black;
     border-radius: 5px;
     height: 575px;
@@ -15,4 +11,8 @@
 .square {
     background-color: white;
     border: 1px solid black;
+}
+
+.hover {
+    background-color: black;
 }
