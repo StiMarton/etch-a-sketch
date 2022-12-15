@@ -1,8 +1,21 @@
 let grid = document.querySelector(".gridContainer");
 const btnReset = document.getElementById('reset');
+const btnRainbow = document.getElementById('rainbow');
 let number = 16;
+let buttonClicked = false;
+let randomColor = "";
+
 
 reset.addEventListener("click", clearGrid)
+
+rainbow.addEventListener("click", function() {
+    buttonClicked = !buttonClicked;
+    if (buttonClicked) {
+        btnRainbow.innerHTML = "Black";
+    } else if (!buttonClicked) {
+        btnRainbow.innerHTML = "Rainbow";
+    }
+});
 
 // Default Grid
 function createGrid() {
@@ -14,14 +27,20 @@ function createGrid() {
         grid.appendChild(div); 
         div.addEventListener('mouseover', mouseOver) 
             function mouseOver() {
-            div.classList.add("hover");
-        } 
+                if (buttonClicked) {
+                    randomColor =
+                    Math.floor(Math.random()*16777215).toString(16);
+                    div.style.backgroundColor = "#" + randomColor;
+                } else if (!buttonClicked) {
+                    div.style.backgroundColor = "black";
+                }
+            } 
     }
-};
+}
 
 function clearGrid() {
     let arrayGrid = [...document.querySelectorAll("div")]
-    arrayGrid.forEach(div=>div.classList.remove("hover"));
+    arrayGrid.forEach(div=>div.style.backgroundColor = "white");
 }
 
 function changeGrid() {
