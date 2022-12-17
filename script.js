@@ -40,7 +40,7 @@ function createGrid() {
 
 function clearGrid() {
     let arrayGrid = [...document.querySelectorAll("div")]
-    arrayGrid.forEach(div=>div.style.backgroundColor = "white");
+    arrayGrid.forEach(div=>div.style.backgroundColor = "#d9d9d9");
 }
 
 function changeGrid() {
