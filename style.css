@@ -4,21 +4,40 @@
          url('fonts/04b_30__-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
+}
 
+@font-face {
+    font-family: 'retro_gamingregular';
+    src: url('fonts/retro_gaming-webfont.woff2') format('woff2'),
+         url('fonts/retro_gaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     background-color: #38614d;
     background-image: url("img/square.jpg");
 }
 
 h1 {
     font-family:'04b30', Calibri, Tahoma, sans-serif;
+    color: yellowgreen;
     text-align: center;
-    padding-bottom: 100px;
+    font-size: 3em;
+    text-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 50px;
     padding-top: 10px;
+    margin-top: 35px;
 }
 
 main {
@@ -30,25 +49,40 @@ main {
 .buttonContainer {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
     gap: 35px;
 }
 
 button {
+    font-family: 'retro_gamingregular';
+    font-size: 1em;
+    color: yellowgreen;
+    border: 2px solid yellowgreen;
+    background-color: rgb(24, 26, 21);
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
     padding: 20px;
+}
+
+button:hover {
+    background-color: rgb(98, 107, 81);
+    transform: translateX(10px);
+}
+
+button:active {
+   background-color: #d9d9d9;
 }
 
 
 .gridContainer {
     display: inline-grid;
     background-color: #d9d9d9;
-    border: 5px solid black;
+    border: 10px solid yellowgreen;;
     border-radius: 5px;
     height: 575px;
     width: 575px;
     margin 0 10px;
     flex-shrink: 0;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .square {
@@ -57,6 +91,10 @@ button {
 
 footer {
     display: flex;
+    font-family: Calibri, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    color: yellowgreen;
     justify-content: center;
     text-align: center;
 }

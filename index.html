@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Etch-a-Sketch</h1>
-</header>
-<main>
+    <header>
+        <h1>Etch-a-Sketch</h1>
+    </header>
+    <main>
+    
+    <div class="buttonContainer">
+        <button class="btn" id="change-grid" onclick="window.changeGrid()">Change Grid</button>
+        <button class="btn" id="eraser">Eraser OFF</button>
+        <button class="btn" id="reset">Clear</button>
+        <button class="btn" id="rainbow">Ranbow</button>
+    </div>
 
-<div class="buttonContainer">
-    <button class="btn" id="change-grid" onclick="window.changeGrid()">Change Grid</button>
-    <button class="btn" id="reset">Clear</button>
-    <button class="btn" id="rainbow">Ranbow</button>
-</div>
+    <div class="gridContainer"></div>
 
-<div class="gridContainer"></div>
-
-</main>
-<footer>
-    <p>The Odin Prject 2022</p>
-</footer>
+    </main>
+    <footer>
+        <p>The Odin Prject 2022</p>
+    </footer>
 <script src="script.js"></script>   
 </body>
 </html>
